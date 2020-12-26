@@ -1,3 +1,4 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 .logo {
     height: 50px;
     width: 50px;
@@ -14,7 +15,12 @@
 }
 
 .sportdepot {
+    margin-right: 20px;
     text-decoration: none;
+}
+
+.nike {
+    margin-right: 40px;
 }
 
 .shoe-img {
@@ -30,6 +36,14 @@
     border-radius: 1%;
 }
 
+.user-shoe-container {
+    background-color: rgb(230, 224, 216);
+    border-right: #474747 2px solid;
+    border-left: #474747 2px solid;
+    border-bottom: #474747 2px solid;
+    border-radius: 1%;
+}
+
 .shoe-title {
     font-weight: bold;
     font-size: 200%;
@@ -39,6 +53,7 @@
     height: 100%;
     width: 100%;
     font-size: 150% !important;
+    background-color: #f8f9fa!important;
 }
 
 .history-brand {
@@ -51,6 +66,9 @@
 }
 
 .main-container {
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: rgb(233, 230, 230);
@@ -66,3 +84,65 @@
 .jordan-collage {
     padding-bottom: 5%;
 }
+
+.item-not-found {
+    align-items: center;
+}
+
+.login-container {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    font-family: 'Shrikhand', cursive;
+    background-color: rgb(31, 31, 31);
+    -webkit-box-shadow: 6px -5px 13px 5px rgba(0, 0, 0, 0.24);
+    box-shadow: 6px -5px 13px 5px rgba(0, 0, 0, 0.24);
+    padding: 10%;
+    margin: auto
+}
+
+.register-container {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
+    font-family: 'Shrikhand', cursive;
+    background-color: rgb(31, 31, 31);
+    -webkit-box-shadow: 6px -5px 13px 5px rgba(0, 0, 0, 0.24);
+    box-shadow: 6px -5px 13px 5px rgba(0, 0, 0, 0.24);
+    padding: 10%;
+    margin: auto
+}
+
+.register-container label {
+    color: white
+}
+
+.login-container label {
+    color: white
+}
+
+.log-in-btn {
+    margin-bottom: 3%;
+    background-image: linear-gradient(to right, rgb(39, 9, 209), rgb(130, 8, 201), rgb(196, 1, 255));
+}
+
+.log-in-btn:hover {
+    opacity: 1
+}
+
+.favourite-icon {
+    color: #868181;
+    font-size: 2.5rem;
+
+}
+.heart-animation{
+	animation-duration: 500ms;
+  	animation-name: like-heart-animation;
+  	animation-timing-function: ease-in-out;
+}
+@keyframes like-heart-animation{ 
+  { opacity:.9; transform:scale(1.2); }
+  30% { transform:scale(.95); }
+  45%,
+  80% { opacity:.9; transform:scale(1); }
+} 0% { opacity:0; transform:scale(0); }
+  15%
+

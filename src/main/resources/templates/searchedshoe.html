@@ -4,7 +4,12 @@
 
 <body>
     <th:block th:include="~{/_shared/navbar :: navbar-fragment}"></th:block>
-    <div class="main-container container-fluid row">
+    <div class="main-container  row">
+        <div class="item-not-found col-sm-12" th:if="${shoes.isEmpty()}">
+            <img class="col-sm-1"src="img/not-found.png" alt="item-not-found" />
+            </br>
+            <p1 class="col-sm-12"> Shoes are not found </p1>
+        </div>
         <div class="shoe-container container col-sm-6 text-center" th:each="shoe : ${shoes}">
             <div class="h-1 shoe-title" th:text="${shoe.model}">
             </div>
@@ -16,16 +21,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class=" container-fluid" th:if="${isLastPage==false}">
-        <button  class="btn btn-outline-primary more-shoes-btn" type="button" onclick="nextbtn()"> 
-                Next
-            </button>
-    </div>
-     <div class=" container-fluid" th:if="${isLastPage==true}">
-        <button  class="btn btn-outline-primary more-shoes-btn" type="button" onclick='location.href="/shoes"'> 
-                Go to first page
-            </button>
     </div>
     <th:block th:include="~{/_shared/footer :: footer-fragment}"></th:block>
     <script type="text/javascript" src="js/shoes.js"></script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<th:block th:include="~{/_shared/head :: head-fragment}"></th:block>
+
+<body>
+    <th:block th:include="~{/_shared/userNavbar :: userNavbar-fragment}"></th:block>
+    <div class="main-container  row">
+        <div class="item-not-found col-sm-12" th:if="${shoes.isEmpty()}">
+            <img class="col-sm-1" src="img/not-found.png" alt="item-not-found" />
+            </br>
+            <p1 class="col-sm-12"> Shoes are not found </p1>
+        </div>
+        <div class="user-shoe-container container col-sm-6 text-center" th:each="shoe : ${shoes}">
+            <div class="h-1 shoe-title" th:text="${shoe.model}">
+            </div> 
+                <i class="fas fa-heart favourite-icon" th:id="'favourite-icon-'+${shoe.id}"onclick="addFavourite(this.id)"></i>
+            <div>
+                <img class="shoe-img " th:src="${shoe.img_url}" alt="${shoe.model}" />
+            </div>
+            <div class="shoe-description">
+                <div class="p-1" th:text="${shoe.description}">
+                </div>
+            </div>
+         <!--> <th:block th:include="~{/_shared/stars :: stars-fragment}"></th:block> <!-->
+        </div>
+    </div>
+    <th:block th:include="~{/_shared/footer :: footer-fragment}"></th:block>
+    <script type="text/javascript" src="js/profile.js"></script>
+</body>
+
+</html>
